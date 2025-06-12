@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "lucieepsi/regression-lineaire-flask",
+  "pipelineDirectory": "regression-lineaire-flask",
+  "workspaceDirectory": "regression-lineaire-flask\\regression-lineaire-flask",
+  "repositories": {
+    "lucieepsi/regression-lineaire-flask": {
+      "repositoryPath": "regression-lineaire-flask\\regression-lineaire-flask",
+      "lastRunOn": "06/12/2025 15:08:06 +02:00"
+    }
+  },
+  "lastRunOn": "06/12/2025 15:08:06 +02:00"
+}

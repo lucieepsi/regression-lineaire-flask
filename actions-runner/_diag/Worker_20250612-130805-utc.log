@@ -1,0 +1,1295 @@
+[2025-06-12 13:08:05Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-06-12 13:08:05Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:05Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:05Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.credentials'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known config file 'Runner': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.runner'
+[2025-06-12 13:08:06Z INFO Worker] Version: 2.325.0
+[2025-06-12 13:08:06Z INFO Worker] Commit: 71ed7cd46223bd5d61633445946813012b502d54
+[2025-06-12 13:08:06Z INFO Worker] Culture: fr-FR
+[2025-06-12 13:08:06Z INFO Worker] UI Culture: fr-FR
+[2025-06-12 13:08:06Z INFO Worker] Waiting to receive the job message from the channel.
+[2025-06-12 13:08:06Z INFO ProcessChannel] Receiving message of length 19529, with hash '9eea5c007f221c999598ad5538b7c1ef300d940ddf3a4243e34855f4f6f57730'
+[2025-06-12 13:08:06Z INFO Worker] Message received.
+[2025-06-12 13:08:06Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/python-ci.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v2",
+        "repositoryType": "GitHub"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "c4be6035-6c4d-4035-b602-ad9f5dcb92e5",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-python",
+        "ref": "v2",
+        "repositoryType": "GitHub"
+      },
+      "contextName": "__actions_setup-python",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 16,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 16,
+              "col": 11,
+              "lit": "python-version"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 16,
+              "col": 27,
+              "lit": "3.x"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "d1e4b621-f05f-4931-8253-ed9d5f3ff4ca",
+      "name": "__actions_setup-python"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 17,
+              "col": 14,
+              "lit": "pip install -r requirements.txt"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "16960052-3f45-41df-900c-0648dedc03dd",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 18,
+              "col": 14,
+              "lit": "pytest -v"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "9031b5c1-20d2-489d-812e-05d2f60ca2b0",
+      "name": "__run_2"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "false"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "true"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "build"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "76148ef0-8e50-485d-8654-1f70a505f288.build.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "build"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "76148ef0-8e50-485d-8654-1f70a505f288",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "76148ef0-8e50-485d-8654-1f70a505f288",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "37c223b5-f1b8-583f-acff-8c67f21bbb98",
+  "jobDisplayName": "build",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/e298BocD8O2i1Nt1p9Fk5YVcJkEi1ntFla3tcG59UxghLe46AK/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus25.actions.githubusercontent.com/e298BocD8O2i1Nt1p9Fk5YVcJkEi1ntFla3tcG59UxghLe46AK/",
+          "GenerateIdTokenUrl": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-3-azure-eastus.actions.githubusercontent.com/72/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "e96e0ff203f9ca338c55ae07fa822a02f8159129"
+        },
+        {
+          "k": "repository",
+          "v": "lucieepsi/regression-lineaire-flask"
+        },
+        {
+          "k": "repository_owner",
+          "v": "lucieepsi"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "95470509"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/lucieepsi/regression-lineaire-flask.git"
+        },
+        {
+          "k": "run_id",
+          "v": "15611389493"
+        },
+        {
+          "k": "run_number",
+          "v": "2"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "actor_id",
+          "v": "95470509"
+        },
+        {
+          "k": "actor",
+          "v": "lucieepsi"
+        },
+        {
+          "k": "workflow",
+          "v": "Python CI"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "e96e0ff203f9ca338c55ae07fa822a02f8159129"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "fd90701ec008e045cce466b0e978589b5dbb6c09"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "lucie.delannoy@ecoles-epsi.net"
+                              },
+                              {
+                                "k": "name",
+                                "v": "lucie"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "lucie.delannoy@ecoles-epsi.net"
+                              },
+                              {
+                                "k": "name",
+                                "v": "lucie"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "e96e0ff203f9ca338c55ae07fa822a02f8159129"
+                        },
+                        {
+                          "k": "message",
+                          "v": "workflow"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2025-06-12T15:07:53+02:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "69ee940bf7f5e8f7bb112fe142c04fc24ded812e"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/lucieepsi/regression-lineaire-flask/commit/e96e0ff203f9ca338c55ae07fa822a02f8159129"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/lucieepsi/regression-lineaire-flask/compare/fd90701ec008...e96e0ff203f9"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "lucie.delannoy@ecoles-epsi.net"
+                          },
+                          {
+                            "k": "name",
+                            "v": "lucie"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "lucie.delannoy@ecoles-epsi.net"
+                          },
+                          {
+                            "k": "name",
+                            "v": "lucie"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "e96e0ff203f9ca338c55ae07fa822a02f8159129"
+                    },
+                    {
+                      "k": "message",
+                      "v": "workflow"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2025-06-12T15:07:53+02:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "69ee940bf7f5e8f7bb112fe142c04fc24ded812e"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/lucieepsi/regression-lineaire-flask/commit/e96e0ff203f9ca338c55ae07fa822a02f8159129"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "95470509+lucieepsi@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "lucieepsi"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/lucieepsi/regression-lineaire-flask.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1749731130.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "lucieepsi/regression-lineaire-flask"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/lucieepsi/regression-lineaire-flask.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/lucieepsi/regression-lineaire-flask"
+                    },
+                    {
+                      "k": "id",
+                      "v": 1000853555.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "Python"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "regression-lineaire-flask"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOO6fQMw"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/95470509?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "95470509+lucieepsi@users.noreply.github.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/lucieepsi/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/lucieepsi/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/lucieepsi/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/lucieepsi/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/lucieepsi"
+                          },
+                          {
+                            "k": "id",
+                            "v": 95470509.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "lucieepsi"
+                          },
+                          {
+                            "k": "name",
+                            "v": "lucieepsi"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOBbDDrQ"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/lucieepsi/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/lucieepsi/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/lucieepsi/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/lucieepsi/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/lucieepsi/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/lucieepsi"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1749733678.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:lucieepsi/regression-lineaire-flask.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/lucieepsi/regression-lineaire-flask"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2025-06-12T13:04:16Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/lucieepsi/regression-lineaire-flask"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/95470509?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/lucieepsi/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/lucieepsi/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/lucieepsi/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/lucieepsi/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/lucieepsi"
+                    },
+                    {
+                      "k": "id",
+                      "v": 95470509.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "lucieepsi"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDOBbDDrQ"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/lucieepsi/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/lucieepsi/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/lucieepsi/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/lucieepsi/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/lucieepsi/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/lucieepsi"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "lucieepsi/regression-lineaire-flask/.github/workflows/python-ci.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "e96e0ff203f9ca338c55ae07fa822a02f8159129"
+        },
+        {
+          "k": "repository_id",
+          "v": "1000853555"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "lucieepsi"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDOBbDDrQ"
+}
+[2025-06-12 13:08:06Z INFO JobRunner] Job ID 37c223b5-f1b8-583f-acff-8c67f21bbb98
+[2025-06-12 13:08:06Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin\Runner.Worker.dll
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO ConfigurationStore] binPath: C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO ConfigurationStore] RootFolder: C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known config file 'Runner': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.runner'
+[2025-06-12 13:08:06Z INFO ConfigurationStore] ConfigFilePath: C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.runner
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.runner_migrated'
+[2025-06-12 13:08:06Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.runner_migrated
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.credentials'
+[2025-06-12 13:08:06Z INFO ConfigurationStore] CredFilePath: C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.credentials
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.credentials_migrated'
+[2025-06-12 13:08:06Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.credentials_migrated
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known config file 'Service': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.service'
+[2025-06-12 13:08:06Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.service
+[2025-06-12 13:08:06Z INFO ConfigurationStore] Read setting file: 404 chars
+[2025-06-12 13:08:06Z INFO JobRunner] Initializing launch client
+[2025-06-12 13:08:06Z INFO JobServerQueue] Initializing results client
+[2025-06-12 13:08:06Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2025-06-12 13:08:06Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2025-06-12 13:08:06Z INFO JobServerQueue] Start process web console line queue.
+[2025-06-12 13:08:06Z INFO JobServerQueue] Start process file upload queue.
+[2025-06-12 13:08:06Z INFO JobServerQueue] Start results file upload queue.
+[2025-06-12 13:08:06Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-06-12 13:08:06Z INFO JobServerQueue] Start process timeline update queue.
+[2025-06-12 13:08:06Z INFO ExecutionContext] Initializing Job context
+[2025-06-12 13:08:06Z INFO ExecutionContext] Initialize GitHub context
+[2025-06-12 13:08:06Z INFO ExecutionContext] Initialize Env context
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Diag': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_diag'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Diag': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_diag'
+[2025-06-12 13:08:06Z INFO JobRunner] Starting the job execution context.
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work'
+[2025-06-12 13:08:06Z INFO JobRunner] Validating directory permissions for: 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Tools': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work\_tool'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Temp': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work\_temp'
+[2025-06-12 13:08:06Z INFO JobRunner] Getting job extension.
+[2025-06-12 13:08:06Z INFO JobRunner] Initialize job. Getting all job steps.
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Diag': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_diag'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Diag': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_diag'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.credentials'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\.setup_info'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work'
+[2025-06-12 13:08:06Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work\_PipelineMapping\lucieepsi/regression-lineaire-flask\PipelineFolder.json
+[2025-06-12 13:08:06Z INFO PipelineDirectoryManager] Creating a new tracking config file.
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work'
+[2025-06-12 13:08:06Z INFO PipelineDirectoryManager] Creating pipeline directory.
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work'
+[2025-06-12 13:08:06Z INFO PipelineDirectoryManager] Creating workspace directory.
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work'
+[2025-06-12 13:08:06Z INFO JobExtension] Downloading actions
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\bin'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work'
+[2025-06-12 13:08:06Z INFO HostContext] Well known directory 'Actions': 'C:\Users\lucie\OneDrive\Desktop\I1\Automatisation de tests\TP flask\actions-runner\_work\_actions'
+[2025-06-12 13:08:06Z INFO Worker] Listening for cancel message from the channel.
+[2025-06-12 13:08:06Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
