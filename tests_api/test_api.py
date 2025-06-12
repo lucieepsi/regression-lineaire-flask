@@ -20,4 +20,3 @@ def test_analyse_erreur(client):
     assert r.status_code == 400
     assert "error" in r.get_json()
     
-#test
