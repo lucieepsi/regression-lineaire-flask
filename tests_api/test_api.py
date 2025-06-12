@@ -19,3 +19,5 @@ def test_analyse_erreur(client):
     r = client.post('/analyse', json={"x": [], "y": []})
     assert r.status_code == 400
     assert "error" in r.get_json()
+    
+#test
